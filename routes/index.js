@@ -14,19 +14,25 @@ router.get('/themeGenerator', function (req, res) {
 })
 
 router.get('/themeGenerator/:primaryColor?/:secondaryColor?/:filename?', function (req, res) {
-	console.log(req.params.primaryColor);
-	console.log(`Executing gulp sass task`);
+	console.log(`Executing gulp sass task passing ${req.params.primaryColor} as primary color.`);
 	
 	exec(`gulp sass --primaryColor ${req.params.primaryColor}`, function (err, stdout, stderr) {
 		if (err) {
 			console.error(`exec error: ${err}`);
-			return;
+			res.send(req.params);
 		}
 		
-		console.log(`Exectuted gulp sass task`);
+		exec(`cat ./public/stylesheets/css/theme.css`, function (err, stdout, stderr) {
+			if (err) {
+				console.error(`exec error on concat: ${err}`);
+				res.send(req.params);
+			}
+			
+			res.send({'theme' : stdout})
+		});
 	});
 	
-	res.send(req.params)
+	
 });
 
 module.exports = router;

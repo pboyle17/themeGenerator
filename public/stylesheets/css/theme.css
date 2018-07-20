@@ -6,7 +6,7 @@ body {
   color: #000; }
 
 .thm-hglight-text_color, a {
-  color: red; }
+  color: green; }
 
 .thm-dark_text_color {
   color: #000; }
@@ -37,11 +37,11 @@ body {
   background-color: #4a4a4a; }
 
 .thm-hglight-bg_color, .before_thm-hglight-bg_color:before, .after_thm-hglight-bg_color:after {
-  background-color: red; }
+  background-color: green; }
 
 /* ------------- Border Colors ------------- */
 .thm-hglight_border, fieldset input:focus, fieldset textarea:focus, form input[type="submit"]:hover {
-  border: 1px solid red; }
+  border: 1px solid green; }
 
 .thm-general_border {
   border: 1px solid #c6c6c6; }
@@ -135,10 +135,10 @@ body {
 
 /* ------------- Hover Colors ------------- */
 .thm-hglight-text_color-hover:hover {
-  color: red; }
+  color: green; }
 
 .thm-hglight-bg_color-hover:hover {
-  background-color: red; }
+  background-color: green; }
 
 /* ------------- JQuery UI Theme Colors ------------- */
 /* Color */
@@ -152,7 +152,7 @@ body {
   color: #ffffff; }
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
-  color: red; }
+  color: green; }
 
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error, .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a, .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text {
   color: #222222; }
@@ -162,7 +162,7 @@ body {
   border: 1px solid #c6c6c6; }
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
-  border: 1px solid red; }
+  border: 1px solid green; }
 
 /* Background */
 .ui-widget-content, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight, .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
@@ -175,7 +175,7 @@ body {
   background-color: #f6f6f6; }
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
-  background-color: red; }
+  background-color: green; }
 
 .ui-widget-overlay {
   background-color: #333333; }
@@ -235,7 +235,7 @@ form.form_design_version_2.thm-form_dark .error_wrap select {
 .modal_design_version_2.modal-inner-wrapper .ui-dialog-titlebar,
 .ui-datepicker.form_design_version_2 .ui-datepicker-header,
 .ui-datepicker.form_design_version_2 .ui-state-hover {
-  background-color: red;
+  background-color: green;
   color: #fff; }
 
 .ui-datepicker.form_design_version_2 .ui-state-hover,
@@ -245,5 +245,5 @@ form.form_design_version_2 input[type="tel"]:focus,
 form.form_design_version_2 input[type="email"]:focus,
 form.form_design_version_2 textarea:focus,
 form.form_design_version_2 select:focus {
-  border: 1px solid red;
+  border: 1px solid green;
   outline: none; }
