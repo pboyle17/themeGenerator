@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/* CSS Document */
+/* ------------- Theme Colors ------------- */
+/* ------------- Text Colors ------------- */
+body {
+  color: #000; }
+
+.thm-hglight-text_color, a {
+  color: red; }
+
+.thm-dark_text_color {
+  color: #000; }
+
+.thm-light_text_color {
+  color: #4a4a4a; }
+
+.thm-lighter_text_color {
+  color: #929292; }
+
+.thm-inverse_text_color {
+  color: #fff; }
+
+/* ------------- Background Colors ------------- */
+.thm-white-bg_color {
+  background-color: #fff; }
+
+.thm-light-bg_color {
+  background-color: #ececec; }
+
+.thm-med_light-bg_color {
+  background-color: #e0e0e0; }
+
+.thm-med-bg_color {
+  background-color: #c6c6c6; }
+
+.thm-dark-bg_color {
+  background-color: #4a4a4a; }
+
+.thm-hglight-bg_color, .before_thm-hglight-bg_color:before, .after_thm-hglight-bg_color:after {
+  background-color: red; }
+
+/* ------------- Border Colors ------------- */
+.thm-hglight_border, fieldset input:focus, fieldset textarea:focus, form input[type="submit"]:hover {
+  border: 1px solid red; }
+
+.thm-general_border {
+  border: 1px solid #c6c6c6; }
+
+.thm-lighter_border {
+  border: 1px solid #ddd; }
+
+.thm-inverse_border {
+  border: 1px solid #fff; }
+
+/* ------------- Gradient Colors ------------- */
+.thm-box_gradient {
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e5e5e5));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #ffffff, #e5e5e5);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #ffffff, #e5e5e5);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #ffffff, #e5e5e5);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #ffffff, #e5e5e5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#e5e5e5');
+  /* IE6–IE9 */ }
+
+.thm-med-box_gradient {
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ececec), to(#c6c6c6));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #ececec, #c6c6c6);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -moz-linear-gradient(top, #ececec, #c6c6c6);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #ececec, #c6c6c6);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #ececec, #c6c6c6);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #ececec, #c6c6c6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ececec', EndColorStr='#c6c6c6');
+  /* IE6–IE9 */ }
+
+.thm-hor_gradient-dk_lt {
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, left center, right center, from(#e1e1e1), to(#eeeeee));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(left, #e1e1e1, #eeeeee);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -moz-linear-gradient(left, #e1e1e1, #eeeeee);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(left, #e1e1e1, #eeeeee);
+  /* IE10 */
+  background-image: -o-linear-gradient(left, #e1e1e1, #eeeeee);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(left, #e1e1e1, #eeeeee);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#e1e1e1');
+  /* IE6–IE9 */ }
+
+.thm-hor_gradient-lt_dk {
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, left center, right center, from(#eeeeee), to(#e1e1e1));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(left, #eeeeee, #e1e1e1);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -moz-linear-gradient(left, #eeeeee, #e1e1e1);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(left, #eeeeee, #e1e1e1);
+  /* IE10 */
+  background-image: -o-linear-gradient(left, #eeeeee, #e1e1e1);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(left, #eeeeee, #e1e1e1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#e1e1e1');
+  /* IE6–IE9 */ }
+
+.thm-light-hor_gradient-lt_dk {
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, left center, right center, from(#ffffff), to(#f3f3f3));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(left, #ffffff, #f3f3f3);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -moz-linear-gradient(left, #ffffff, #f3f3f3);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(left, #ffffff, #f3f3f3);
+  /* IE10 */
+  background-image: -o-linear-gradient(left, #ffffff, #f3f3f3);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(left, #ffffff, #f3f3f3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#f3f3f3');
+  /* IE6–IE9 */ }
+
+/* ------------- Hover Colors ------------- */
+.thm-hglight-text_color-hover:hover {
+  color: red; }
+
+.thm-hglight-bg_color-hover:hover {
+  background-color: red; }
+
+/* ------------- JQuery UI Theme Colors ------------- */
+/* Color */
+.ui-widget-content, .ui-widget-content a, .ui-widget-header a, .ui-widget-header, .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight, .ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a {
+  color: #444444; }
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+  color: #4a4a4a; }
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-state-hover a, .ui-state-hover a:hover {
+  color: #ffffff; }
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+  color: red; }
+
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error, .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a, .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text {
+  color: #222222; }
+
+/* Border */
+.ui-widget-content, .ui-widget-header, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  border: 1px solid #c6c6c6; }
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
+  border: 1px solid red; }
+
+/* Background */
+.ui-widget-content, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight, .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
+  background-color: #ffffff; }
+
+.ui-widget-header {
+  background-color: #ececec; }
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background-color: #f6f6f6; }
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+  background-color: red; }
+
+.ui-widget-overlay {
+  background-color: #333333; }
+
+.ui-widget-shadow {
+  background-color: #aaaaaa; }
+
+/* ------------- Form Themes ------------- */
+.form_wrapper_v2 form.form_design_version_2.thm-form_light,
+.form_wrapper_v2 form.form_design_version_2.thm-form_dark {
+  background-color: transparent; }
+
+.form_wrapper_v2.thm-form_light,
+form.form_design_version_2.thm-form_light {
+  background-color: transparent; }
+
+.form_wrapper_v2.thm-form_dark,
+form.form_design_version_2.thm-form_dark {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+form.form_design_version_2 .expand-button {
+  background-color: #58595b;
+  color: #f9fafc; }
+
+form.form_design_version_2 .expand-button.minimized {
+  background-color: #7f8084; }
+
+form.form_design_version_2.thm-form_light .legend_no_bg {
+  color: #000; }
+
+form.form_design_version_2.thm-form_dark .legend_no_bg,
+form.form_design_version_2.thm-form_dark fieldset > div > div:only-child,
+form.form_design_version_2.thm-form_dark label {
+  color: #fff; }
+
+form.form_design_version_2.thm-form_light input[type="text"],
+form.form_design_version_2.thm-form_light input[type="email"],
+form.form_design_version_2.thm-form_light input[type="tel"],
+form.form_design_version_2.thm-form_light textarea,
+form.form_design_version_2.thm-form_light select,
+form.form_design_version_2.thm-form_light .error_wrap input,
+form.form_design_version_2.thm-form_light .error_wrap textarea,
+form.form_design_version_2.thm-form_light .error_wrap select {
+  background-color: #ededed; }
+
+form.form_design_version_2.thm-form_dark input[type="text"],
+form.form_design_version_2.thm-form_dark input[type="email"],
+form.form_design_version_2.thm-form_dark input[type="tel"],
+form.form_design_version_2.thm-form_dark textarea,
+form.form_design_version_2.thm-form_dark select,
+form.form_design_version_2.thm-form_dark .error_wrap input,
+form.form_design_version_2.thm-form_dark .error_wrap textarea,
+form.form_design_version_2.thm-form_dark .error_wrap select {
+  background-color: #fff; }
+
+/* The following use theme colors */
+.modal_design_version_2.modal-inner-wrapper .ui-dialog-titlebar,
+.ui-datepicker.form_design_version_2 .ui-datepicker-header,
+.ui-datepicker.form_design_version_2 .ui-state-hover {
+  background-color: red;
+  color: #fff; }
+
+.ui-datepicker.form_design_version_2 .ui-state-hover,
+#paycalc_wrap form.form_design_version_2 fieldset .input_container input:focus,
+form.form_design_version_2 input[type="text"]:focus,
+form.form_design_version_2 input[type="tel"]:focus,
+form.form_design_version_2 input[type="email"]:focus,
+form.form_design_version_2 textarea:focus,
+form.form_design_version_2 select:focus {
+  border: 1px solid red;
+  outline: none; }
