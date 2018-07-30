@@ -5,14 +5,24 @@ var sass = require('gulp-sass');
 var header = require('gulp-header');
 var ssh = require('gulp-ssh');
 var fs = require('fs');
+var dotenv = require('dotenv');
+
+dotenv.load();
+
+var secretHost = process.env.SHELL_HOST;
+var secretPort = process.env.SHELL_PORT;
+var secretUserName = process.env.SHELL_USERNAME;
+var secretLocalUserName = process.env.SHELL_LOCAL_USERNAME;
+var secretPassword = process.env.SHELL_PASSWORD;
+var secretLocalPassphrase = process.env.SHELL_LOCAL_RSA_PASSPHRASE
 
 var config = {
-	host: 'ord-web01-dev.dealereprocess.net',
-	port: '22',
-	username: 'sites',
-	privateKey: fs.readFileSync('/Users/pboyle/.ssh/id_rsa'),
-	password: '&YCBneKpzVF5JAd8',
-	passphrase: 'soccer17'
+	host: secretHost,
+	port: secretPort,
+	username: secretUserName,
+	privateKey: fs.readFileSync(`/Users/${secretLocalUserName}/.ssh/id_rsa`),
+	password: secretPassword,
+	passphrase: secretLocalPassphrase
 }
 
 var gulpSSH = new ssh({
