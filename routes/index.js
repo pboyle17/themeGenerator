@@ -1,8 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var gulp = require('gulp');
+var fetch = require('node-fetch');
 
 const { exec } = require('child_process');
+
+var fetchSite = async function () {
+	const response = await fetch('http://gearbox.dealereprocess.com:27052/resrc/searchtools/getAllSites/');
+	const data = await response.json();
+}
 
 
 router.get('/', function(req, res, next) {
@@ -35,10 +41,15 @@ router.get('/themeGenerator/:primaryColor?/:secondaryColor?/:filename?', functio
 	
 });
 
-router.get('/shell/', function (req, res) {
-	console.log(`Executing gulp shell task passing`);
+router.get('/shell/:siteId?/:directory?/:file?', function (req, res) {
 	
-	exec(`gulp paulTest`, function (err, stdout, stderr) {
+	
+	
+	const result = fetchSite();
+	console.log(result);
+	
+	
+	exec(`gulp paulTest --dealerId ${sitesInfo.owner_dealer_id} --siteId ${sitesInfo.host} --directory ${req.params.directory} --file ${req.params.file}`, function (err, stdout, stderr) {
 		if (err) {
 			console.error(`exec error: ${err}`);
 			res.send(req.params);
