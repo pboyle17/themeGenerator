@@ -35,4 +35,26 @@ router.get('/themeGenerator/:primaryColor?/:secondaryColor?/:filename?', functio
 	
 });
 
+router.get('/shell/', function (req, res) {
+	console.log(`Executing gulp shell task passing`);
+	
+	exec(`gulp paulTest`, function (err, stdout, stderr) {
+		if (err) {
+			console.error(`exec error: ${err}`);
+			res.send(req.params);
+		}
+		
+		exec(`cat ./logs/shell.log`, function (err, stdout, stderr) {
+			if (err) {
+				console.error(`exec error on concat: ${err}`);
+				res.send(req.params);
+			}
+			
+			res.send({'log' : stdout})
+		});
+	});
+	
+	
+});
+
 module.exports = router;
