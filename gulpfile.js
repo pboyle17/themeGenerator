@@ -76,14 +76,16 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('./public/stylesheets/css'));
 });
 
-gulp.task('paulTest', function () {
-	console.log('paulTest gulp task has started');
+gulp.task('grabSiteFile', function () {
+	let filePath = directory == 'shell' ? 'shell.php' : `${directory}/${file}.${extension}`;
+	
+	let path = `/home/sites/www/dealers/_ids/${dealerId}/sites/${host}/${filePath}`;
+	
 
-	return gulpSSH.shell(
-		[
-			`cd /home/sites/www/dealers/_ids/${dealerId}/sites/${host}/${directory}/`,
-			`cat ${file}.php`],
-			{filePath: 'shell.log'}
-	)
+	return gulpSSH.sftp('read', path, {filePath: `${filePath}`})
 		.pipe(gulp.dest('logs'));
+});
+
+gulp.task('grabCSSViewOutput', () => {
+	
 });
