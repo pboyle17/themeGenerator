@@ -40,25 +40,27 @@ router.get('/themeGenerator/:primaryColor?/:secondaryColor?/:filename?', functio
 	
 });
 
-router.get('/shell/:siteId?/:directory?/:file?', function (req, res) {
+router.get('/shell/:siteId?/:directory?/:file?/:extension?', function (req, res) {
 	fetch('http://gearbox.dealereprocess.com:27052/resrc/searchtools/getAllSites/')
 		.then(res => res.json())
 		.then(data => {
 			let sitesInfo = data.sites[req.params.siteId];
 
-			exec(`gulp paulTest --dealerId ${sitesInfo.owner_dealer_id} --host ${sitesInfo.host} --directory ${req.params.directory} --file ${req.params.file}`, function (err, stdout, stderr) {
+			exec(`gulp paulTest --dealerId ${sitesInfo.owner_dealer_id} --host ${sitesInfo.host} --directory ${req.params.directory} --file ${req.params.file} --extension ${req.params.extension}`, function (err, stdout, stderr) {
 				if (err) {
 					console.error(`exec error: ${err}`);
-					res.send(req.params);
+					res.send(err);
 				}
 				
-				exec(`cat ./logs/shell.log`, function (err, stdout, stderr) {
+				let filePath = req.params.directory == 'shell' ? 'shell.php' : `${req.params.directory}/${req.params.file}.${req.params.extension}`
+				
+				exec(`cat ./logs/${filePath}`, function (err, stdout, stderr) {
 					if (err) {
 						console.error(`exec error on concat: ${err}`);
 						res.send(req.params);
 					}
 					
-					res.send({'log' : stdout})
+					res.send({'file' : stdout})
 				});
 			});
 		})

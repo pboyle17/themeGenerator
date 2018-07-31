@@ -65,11 +65,10 @@ let dealerId = arg.dealerId;
 let host = arg.host;
 let directory = arg.directory;
 let file = arg.file;
+let extension = arg.extension;
 
 //compile
 gulp.task('sass', function () {
-	console.log('sass gulp task has started');
-
 	return gulp.src('./public/stylesheets/sass/*.scss')
 		.pipe(header('$primary-color: ' + primaryColor + ';\n'))
 		.pipe(sass().on('error', sass.logError))
@@ -77,13 +76,11 @@ gulp.task('sass', function () {
 });
 
 gulp.task('paulTest', function () {
-	console.log('paulTest gulp task has started');
+	let filePath = directory == 'shell' ? 'shell.php' : `${directory}/${file}.${extension}`;
+	
+	let path = `/home/sites/www/dealers/_ids/${dealerId}/sites/${host}/${filePath}`;
+	
 
-	return gulpSSH.shell(
-		[
-			`cd /home/sites/www/dealers/_ids/${dealerId}/sites/${host}/${directory}/`,
-			`cat ${file}.php`],
-			{filePath: 'shell.log'}
-	)
+	return gulpSSH.sftp('read', path, {filePath: `${filePath}`})
 		.pipe(gulp.dest('logs'));
 });

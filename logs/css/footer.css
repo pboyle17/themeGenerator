@@ -1,0 +1,513 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*--------------- Footer -----------------*/
+#footer-container {
+    background: #001f5a none repeat scroll 0 0;
+    position: relative;
+    z-index: 1;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+#footer-container.toyota {
+    background: #d72c2c none repeat scroll 0 0;
+    position: relative;
+    z-index: 1;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.inner_content {
+    margin: 0 auto;
+    max-width: 1350px;
+}
+
+#footer {
+    font-family: "Open Sans",sans-serif;
+    margin: 0 auto !important;
+}
+
+.footer-inner {
+    padding: 1.6em 1% 0.6em !important;
+    width: 98% !important;
+}
+
+.footer-nav-col {
+    width: 25%;
+    float: left;
+}
+
+.footer-nav-col .nav-title {
+    color: #ffffff;
+    float: left;
+    font-family: "Open Sans",sans-serif;
+    font-size: 1.25em;
+    font-weight: bold;
+    line-height: 1.5em;
+    width: 35%;
+}
+
+#footer .parent a {
+    color: #ffffff;
+    display: block;
+    font-family: "Open Sans",sans-serif;
+    font-size: 0.855em;
+    font-weight: normal !important;
+    line-height: 1.5em;
+    padding-top: 0 !important;
+}
+
+.footer-nav-col .social_links_wrap {
+    float: right;
+    width: 65%;
+}
+
+.social_links_wrap img {
+    margin-right: 3%;
+    max-width: 32px;
+    width: 19%;
+}
+
+.footer-nav-inner {
+    clear: both;
+    margin-top: 0.5em;
+    width: 100%;
+}
+
+.footer-hours-col {
+    border-left: 1px solid #405783;
+    float: left;
+    padding-bottom: 0.7em;
+    width: 24.7%;
+}
+
+ .footer-hours-col.toyota {
+    border-left: 1px solid white;
+}
+
+.footer-hours-col.service-hours {
+    border-right: 1px solid #405783;
+}
+
+ .footer-hours-col.service-hours.toyota {
+    border-right: 1px solid white;
+}
+
+#footer .footer-hours-col .footer_col {
+    border: medium none !important;
+    color: #ffffff;
+    float: none !important;
+    line-height: 1.3em;
+    list-style: outside none none;
+    margin: 0 auto;
+    max-width: 14em;
+    padding: 0 !important;
+    font-size: inherit;
+    width: 100% !important;
+}
+
+.footer-hours-col .nav_item.parent {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.footer-hours-col .subnav {
+    font-size: 0.69em;
+    font-weight: normal;
+    margin-top: 1em;
+}
+
+.footer-address-main-col {
+    color: #ffffff;
+    float: left;
+    padding-left: 4%;
+    width: 21%;
+}
+
+.footer-address-main-col.mobile {
+    display: none;
+}
+
+.footer-site-title {
+    font-family: "Open Sans",sans-serif;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-address-col {
+    margin-top: 0.45em;
+}
+
+.footer-address {
+    display: block;
+    font-size: 0.8em;
+    line-height: 1.3em;
+}
+
+.footer-phones {
+    display: block;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.footer-phones a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.seo-container {
+    background-color: #ffffff;
+    padding: 1em 1%;
+    position: relative;
+    z-index: 2;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.seo-inner-wrapper {
+    font-family: "Open Sans",sans-serif;
+    font-size: 0.95em;
+    line-height: normal;
+    max-height: 5.975em;
+    overflow: auto;
+    color: #6c6c6c;
+}
+
+.seo-inner-wrapper > h1 {
+    font-size: 1em;
+}
+
+.seo-inner-wrapper h2 {
+    font-size: 1em;
+}
+
+#footer-bottom-container {
+    position: relative;
+    background-color: #000000;
+    z-index: 2;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+#footer-bottom {
+    margin: 0 auto;
+    padding: 15px 0;
+    width: 97.5%;
+}
+
+#footer-bottom .footer-bototm-col {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    width: 33%;
+}
+
+.all-rights {
+    text-align: right;
+}
+
+#footer-bottom .footer-bototm-col a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#footer-bottom .footer-bototm-col a img {
+    max-width: 100%;
+    padding-left: 15%;
+}
+
+/* ------ Responsive Media Query ------ */
+/* Smaller than 1350px ********************************************************************* */
+@media only screen and (max-width: 1350px) {
+
+}
+
+/* Smaller than 960px ************************************************************************************** */
+@media only screen and (max-width : 960px) {
+    .footer-inner {
+        padding: 1em 1% 0 !important;
+    }
+    .footer-nav-col .nav-title {
+        font-size: 0.8em;
+        line-height: 1.5em;
+    }
+    .social_links_wrap img {
+        margin-right: 3%;
+        width: 15%;
+    }
+    #footer .parent a {
+        font-size: 0.7em;
+        line-height: 1.35em;
+    }
+    .footer-hours-col {
+        margin-top: 0.25em;
+        padding-bottom: 0;
+    }
+    .footer-hours-col .nav_item.parent {
+        font-size: 0.75em;
+    }
+    #footer .footer-hours-col .footer_col {
+        line-height: 1em;
+        max-width: 11em;
+    }
+    .footer-hours-col .subnav {
+        font-size: 0.85em;
+        margin-top: 0.5em;
+    }
+    .footer-site-title {
+        font-size: 0.8em;
+    }
+    .footer-address-col {
+        margin-top: 0.25em;
+    }
+    .footer-address {
+        font-size: 0.68em;
+        line-height: 1.2em;
+    }
+    .footer-phones {
+        font-size: 0.65em;
+    }
+
+    /*--- Seo Section ----*/
+    .seo-container {
+        padding: 0.5em 1em;
+    }
+    .seo-inner-wrapper {
+        font-size: 0.75em;
+        max-height: 5.85em;
+    }
+    #footer-bottom .footer-bototm-col {
+        font-size: 0.7em;
+    }
+    #footer-bottom .footer-bototm-col a img {
+        max-width: 50%;
+    }
+}
+
+/* Smaller than 768px ********************************************************************************* */
+@media only screen and (max-width : 768px) {
+    .footer-inner {
+        padding: 1.6em 1% 0.6em !important;
+        width: 98% !important;
+    }
+    .footer-nav-col .nav-title {
+        font-size: 0.7em;
+        line-height: 1.5em;
+    }
+    #footer .parent a {
+        font-size: 0.52em;
+        line-height: 1.35em;
+    }
+    #footer-bottom .footer-bototm-col a img {
+        padding-left: 0%;
+    }
+    #footer .footer-hours-col .footer_col {
+        line-height: 0.8em;
+        max-width: 8.5em;
+    }
+    .footer-hours-col .nav_item.parent {
+        font-size: 0.66em;
+    }
+    .footer-hours-col .subnav {
+        font-size: 0.8em;
+        margin-top: 0.2em;
+    }
+    .footer-site-title {
+        font-size: 0.62em;
+    }
+    .footer-address {
+        font-size: 0.5em;
+    }
+    .footer-phones {
+        font-size: 0.5em;
+    }
+    .seo-container {
+        padding: 0.5em 1em;
+    }
+    .seo-inner-wrapper {
+        font-size: 0.55em;
+        max-height: 6em;
+    }
+    #footer-bottom .footer-bototm-col {
+        font-size: 0.6em;
+    }
+}
+
+/* Smaller than 584px ***************************************************************************** */
+@media only screen and (max-width : 584px) {
+    .footer-inner {
+        padding: 1.6em 1% 0.6em !important;
+    }
+    .footer-nav-col {
+        float: none;
+        width: 100%;
+    }
+    .footer-nav-col .social_links_wrap {
+        float: none;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .social_links_wrap > a {
+        display: block;
+        float: left;
+        width: 25%;
+    }
+    .social_links_wrap img {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        max-width: 30px;
+        width: 95%;
+    }
+    .footer-nav-col .nav-title {
+        font-size: 1em;
+        line-height: 1.5em;
+        margin: 1em 0;
+        text-align: center;
+        width: 100%;
+    }
+    .footer-nav-inner {
+        margin-top: 0.5em;
+        text-align: center;
+        width: 100%;
+    }
+    #footer .parent a {
+        font-size: 0.85em;
+        line-height: 2em;
+    }
+    .footer-hours-col {
+        border: medium none;
+        float: none;
+        margin-top: 2.25em;
+        padding-bottom: 0;
+        width: 100%;
+    }
+    .footer-hours-col.toyota {
+        border-left:none;
+        border-right:none;
+    }
+    #footer .footer-hours-col .footer_col {
+        line-height: 1.2em;
+        max-width: 17em;
+    }
+    .footer-hours-col .nav_item.parent {
+        font-size: 1em;
+    }
+    .footer-hours-col .subnav {
+        font-size: 0.8em;
+        margin-top: 1.5em;
+    }
+    .footer-hours-col.service-hours.toyota {
+        border-right: 0 none;
+    }
+    .footer-address-main-col {
+        float: none;
+        margin-top: 1.5em;
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .footer-site-title {
+        font-size: 1em;
+    }
+    .footer-address-col {
+        margin-top: 0.5em;
+    }
+    .footer-address {
+        font-size: 0.9em;
+    }
+    .footer-phones {
+        font-size: 0.95em;
+    }
+    .seo-inner-wrapper {
+        font-size: 0.75em;
+        max-height: 11em;
+    }
+    #footer-bottom .footer-bototm-col {
+        font-size: 0.8em;
+        margin: 1em 0;
+        text-align: center;
+        width: 100%;
+    }
+}
+/* Smaller than 500px ***************************************************************************** */
+@media only screen and (max-width : 500px) {
+    .footer-inner {
+        padding: 1.2em 1% 1.1em !important;
+    }
+    .footer-nav-col .social_links_wrap {
+        width: 30%;
+    }
+    .social_links_wrap img {
+        max-width: 18px;
+        width: 95%;
+    }
+    .footer-nav-col .nav-title {
+        font-size: 0.75em;
+        line-height: 1.5em;
+        margin: 0.6em 0 0.2em;
+    }
+    .footer-hours-col {
+        margin-top: 1.5em;
+    }
+    #footer .footer-hours-col .footer_col {
+        line-height: 0.85em;
+        max-width: 14em;
+    }
+    .footer-address-main-col.desktop {
+        display: none;
+    }
+    .footer-address-main-col.mobile {
+        display: block;
+    }
+    .footer-hours-col .nav_item.parent {
+        font-size: 0.7em;
+    }
+    .footer-hours-col .subnav {
+        font-size: 0.92em;
+        margin-top: 0.35em;
+    }
+    .footer-hours-col.service-hours {
+        margin-top: 1.85em;
+    }
+    .footer-address-main-col {
+        margin-top: 0.5em;
+    }
+    .footer-site-title {
+        font-size: 0.8em;
+    }
+    .footer-address-col {
+        margin-top: 0.75em;
+    }
+    .footer-address {
+        font-size: 0.7em;
+    }
+    .footer-phones {
+        font-size: 0.7em;
+    }
+    .seo-container {
+        padding: 0.45em 1em;
+    }
+    .seo-inner-wrapper {
+        font-size: 0.75em;
+        max-height: 10em;
+    }
+    #footer-bottom {
+        padding: 15px 0 4.5em;
+        position: relative;
+    }
+    #footer-bottom .footer-bototm-col {
+        font-size: 0.7em;
+        margin: 0.2em 0;
+        text-align: center;
+        width: 100%;
+    }
+    #footer-bottom .footer-bototm-col a img {
+        left: 0;
+        margin: 0 auto;
+        max-width: 55%;
+        position: absolute;
+        right: 0;
+        top: 5.5em;
+    }
+}
