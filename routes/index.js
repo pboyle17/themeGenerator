@@ -5,9 +5,8 @@ var fetch = require('node-fetch');
 
 const { exec } = require('child_process');
 
-var fetchSite = async function () {
-	const response = await fetch('http://gearbox.dealereprocess.com:27052/resrc/searchtools/getAllSites/');
-	const data = await response.json();
+var fetchSite = function (siteId) {
+	const response = fetch('http://gearbox.dealereprocess.com:27052/resrc/searchtools/getAllSites/').then(res => res.json()).then(data => data.sites.siteId);
 }
 
 
@@ -42,30 +41,31 @@ router.get('/themeGenerator/:primaryColor?/:secondaryColor?/:filename?', functio
 });
 
 router.get('/shell/:siteId?/:directory?/:file?', function (req, res) {
-	
-	
-	
-	const result = fetchSite();
-	console.log(result);
-	
-	
-	exec(`gulp paulTest --dealerId ${sitesInfo.owner_dealer_id} --siteId ${sitesInfo.host} --directory ${req.params.directory} --file ${req.params.file}`, function (err, stdout, stderr) {
-		if (err) {
-			console.error(`exec error: ${err}`);
-			res.send(req.params);
-		}
-		
-		exec(`cat ./logs/shell.log`, function (err, stdout, stderr) {
-			if (err) {
-				console.error(`exec error on concat: ${err}`);
-				res.send(req.params);
-			}
-			
-			res.send({'log' : stdout})
+	fetch('http://gearbox.dealereprocess.com:27052/resrc/searchtools/getAllSites/')
+		.then(res => res.json())
+		.then(data => {
+			let sitesInfo = data.sites[req.params.siteId];
+
+			exec(`gulp paulTest --dealerId ${sitesInfo.owner_dealer_id} --host ${sitesInfo.host} --directory ${req.params.directory} --file ${req.params.file}`, function (err, stdout, stderr) {
+				if (err) {
+					console.error(`exec error: ${err}`);
+					res.send(req.params);
+				}
+				
+				exec(`cat ./logs/shell.log`, function (err, stdout, stderr) {
+					if (err) {
+						console.error(`exec error on concat: ${err}`);
+						res.send(req.params);
+					}
+					
+					res.send({'log' : stdout})
+				});
+			});
+		})
+		.catch(err => {
+				console.log(err);
+				res.send(err);
 		});
-	});
-	
-	
 });
 
 module.exports = router;

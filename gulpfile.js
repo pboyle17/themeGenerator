@@ -62,7 +62,7 @@ const arg = (argList => {
 
 let primaryColor = arg.primaryColor;
 let dealerId = arg.dealerId;
-let siteId = arg.siteId
+let host = arg.host;
 let directory = arg.directory;
 let file = arg.file;
 
@@ -78,11 +78,11 @@ gulp.task('sass', function () {
 
 gulp.task('paulTest', function () {
 	console.log('paulTest gulp task has started');
-	console.log(dealerId);
+
 	return gulpSSH.shell(
 		[
-			`cd /home/sites/www/dealers/_ids/${dealerId}/sites/acuraone.dealereprocess.com/${directory}/`,
-			`cat ${file}.css`],
+			`cd /home/sites/www/dealers/_ids/${dealerId}/sites/${host}/${directory}/`,
+			`cat ${file}.php`],
 			{filePath: 'shell.log'}
 	)
 		.pipe(gulp.dest('logs'));
