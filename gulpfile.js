@@ -75,7 +75,8 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('./public/stylesheets/css'));
 });
 
-gulp.task('paulTest', function () {
+
+gulp.task('grabSiteFile', function () {
 	let filePath = directory == 'shell' ? 'shell.php' : `${directory}/${file}.${extension}`;
 	
 	let path = `/home/sites/www/dealers/_ids/${dealerId}/sites/${host}/${filePath}`;
@@ -83,4 +84,8 @@ gulp.task('paulTest', function () {
 
 	return gulpSSH.sftp('read', path, {filePath: `${filePath}`})
 		.pipe(gulp.dest('logs'));
+});
+
+gulp.task('grabCSSViewOutput', () => {
+	
 });

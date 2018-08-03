@@ -46,7 +46,7 @@ router.get('/shell/:siteId?/:directory?/:file?/:extension?', function (req, res)
 		.then(data => {
 			let sitesInfo = data.sites[req.params.siteId];
 
-			exec(`gulp paulTest --dealerId ${sitesInfo.owner_dealer_id} --host ${sitesInfo.host} --directory ${req.params.directory} --file ${req.params.file} --extension ${req.params.extension}`, function (err, stdout, stderr) {
+			exec(`gulp grabSiteFile --dealerId ${sitesInfo.owner_dealer_id} --host ${sitesInfo.host} --directory ${req.params.directory} --file ${req.params.file} --extension ${req.params.extension}`, function (err, stdout, stderr) {
 				if (err) {
 					console.error(`exec error: ${err}`);
 					res.send(err);
@@ -68,6 +68,13 @@ router.get('/shell/:siteId?/:directory?/:file?/:extension?', function (req, res)
 				console.log(err);
 				res.send(err);
 		});
+});
+
+router.get('/grabCSSOutput/:viewBuilder?/:method?', (req, res) => {
+	fetch(`http://gearbox.dealereprocess.com:27052/resrc/css/templates/${req.params.viewBuilder}/${req.params.method}`)
+		.then(data => data.text())
+		.then(text => res.send(text))
+		.catch(err => console.log(err));
 });
 
 module.exports = router;
