@@ -1,0 +1,558 @@
+/*=================== Header ===================*/
+#shell-header {
+    background-color: #ffffff;
+    margin: 0 auto;
+    max-width: 1350px;
+    padding: 1em 0.5% 0.5em;
+    position: relative;
+    z-index: 1;
+}
+
+.phone-desktop b {
+    color: #000000;
+}
+
+.megamenu_mobile {
+    position: relative;
+    z-index: 2;
+}
+
+#shell-header .lh-container {
+    width: 28%;
+    float: left;
+}
+
+#shell-header .rh-container {
+    width: 72%;
+    float: right;
+}
+.header_wrap {
+    position: relative;
+    z-index: 3;
+	background-color: #fff;
+}
+
+/*--- Smart Search ------*/
+.smart-search-cont {
+    background-color: #e6e6e6;
+    float: right;
+    padding: 0.5% 0.7%;
+    width: 34.6%;
+}
+#search_lbl {
+    float: left;
+    width: 12%;
+}
+.smart-search {
+    float: left;
+    width: 85%;
+}
+#search_lbl > img {
+    margin-top: 0.1em;
+    max-width: 24px;
+    width: 100%;
+}
+#s_search {
+    background-color: transparent;
+    border: medium none;
+    float: left;
+    font-weight: 700;
+    height: 25px;
+    position: relative;
+    width: 98%;
+    padding: 0 1px;
+}
+div.smart-search .close-result-wrapper {
+    bottom: 0.15em !important;
+}
+div.smart-search div.result-wrapper {
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    top: 3.3em;
+    width: 98% !important;
+    max-width: 1350px;
+}
+.logo-wrapper {
+    margin-top: 0.25%;
+}
+
+.text-logo {
+    max-width: 100%;
+}
+
+.text-logo.toyota {
+    max-width: 92%;
+}
+
+.address-container {
+    margin-top: 10px;
+}
+
+.address-container > a {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #003a77;
+    text-decoration: none;
+}
+
+.phone-container {
+    color: #012871;
+    margin-top: 0.75em;
+    text-align: left;
+    width: 64%;
+    font-size: 0.875em;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 700;
+}
+
+.phone-container.toyota {
+    color: black;
+}
+
+.phone-container .phone-desktop a {
+    color: #012871;
+    text-decoration: none;
+}
+
+.phone-mobile {
+    display: none !important;
+    cursor: pointer;
+}
+
+.phone-mobile #phone-icon {
+    padding-right: 10px;
+}
+
+.phone-mobile .map-icon {
+    padding-left: 10px;
+    border-left: 1px solid #000;
+}
+
+#phone-drop-down-container {
+    position: absolute;
+    width: 100%;
+    height: 312px;
+    background: #FFFFFF;
+    z-index: 999;
+    top: 7em;
+    overflow: hidden;
+    -webkit-transition: height .5s ease-in-out;
+    -moz-transition: height .5s ease-in-out;
+    -ms-transition: height .5s ease-in-out;
+    -o-transition: height .5s ease-in-out;
+    transition: height .5s ease-in-out;
+    -webkit-box-shadow: 0 5px 10px -5px #000;
+    box-shadow: 0 5px 10px -5px #000;
+    border-radius: .1px;
+}
+
+#phone-drop-down-container.closed {
+    height: 0;
+}
+
+#phone-drop-down-container #phone-drop-down-wrap {
+    padding: 15px;
+
+}
+
+#phone-drop-down-container #phone-drop-down-wrap .phone-wrap {
+    margin-bottom: 20px;
+}
+
+#phone-drop-down-container #phone-drop-down-wrap .phone-wrap.last {
+    margin-bottom: 0px;
+}
+
+#phone-drop-down-container #phone-drop-down-wrap .phone-title {
+    font-size: 17px;
+    display: block;
+}
+
+#phone-drop-down-container #phone-drop-down-wrap a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#phone-drop-down-container #phone-drop-down-wrap .phone-number, #phone-drop-down-container #phone-drop-down-wrap .phone-number-location {
+    font-size: 14px;
+    display: block;
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#phone-drop-down-container #phone-drop-down-wrap .phone-number:hover, #phone-drop-down-container #phone-drop-down-wrap .phone-number-location:hover {
+    background: #011f5b;
+}
+
+#phone-drop-down-container #phone-drop-down-close-wrap {
+    text-align: center;
+    font-size: 15px;
+    display: block;
+    background: #cecece;
+    color: #444444;
+    border-top: 1px solid #777777;
+    padding: 15px;
+    cursor: pointer;
+}
+
+/*------- Mobile Menu -----*/
+.megamenu_mobile .toggle_menu_bar {
+    background: #000000 !important;
+}
+
+.megamenu_mobile .toggle_menu_button {
+    background: #011f5b !important;
+    font-size: 0.95em !important;
+    font-weight: bold !important;
+    padding: 13px 0 !important;
+    width: 30.3% !important;
+}
+
+.megamenu_mobile.toyota .toggle_menu_button {
+    background: #d72c2c !important;
+}
+
+.megamenu_mobile_body {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.megamenu_mobile_body .item_icon {
+    background-image: url("http://cdn.dealereprocess.org/cdn/img/megamenu/blue_icons.png") !important;
+}
+
+.megamenu_mobile_body .group_label_container {
+    background: #011f5b !important;
+}
+
+.megamenu_mobile_body .active_parent .clickable_li {
+    color: #011f5b !important;
+}
+
+.megamenu_mobile .toggle_menu_bar .site_title {
+    width: 69% !important;
+}
+
+/*------- Mega Menu --------*/
+#megamenu {
+    float: left;
+    margin-top: 1.55em;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+#megamenu .parent_label {
+    color: #000000;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+#megamenu .colored_box {
+    background: #001f5a;
+    border: 1px solid #001f5a;
+    border-radius: 0.3em;
+    color: #f5f5f5;
+    padding: 0.5em;
+}
+
+#megamenu.toyota .colored_box {
+    background: black;
+    border: 1px solid black;
+    border-radius: 0.3em;
+    /*color: black;*/
+    padding: 0.5em;
+}
+#megamenu .item_icon {
+    background-image: url("http://cdn.dealereprocess.org/cdn/img/megamenu/blue_icons.png");
+}
+#megamenu.toyota .item_icon {
+    background-image: url("http://cdn.dealereprocess.org/cdn/img/megamenu/red_icons.png");
+}
+.megamenu_navigation_container .parent_li {
+    padding-bottom: 1em;
+}
+/*.megamenu_content_container {
+    left: -38%;
+    width: 117%!important;
+}*/
+#megamenu .active_parent .parent_label {
+    color: #c51010;
+}
+/*----------- Smaller then 1350px -------*/
+
+@media all and (max-width: 1350px) {
+    .phone-container {
+        font-size: 0.7em;
+        font-weight: 600;
+        margin-top: 1.2em;
+    }
+    div.smart-search div.result-wrapper {
+        width: 96% !important;
+    }
+    #megamenu .parent_label {
+        font-size: 0.7em;
+    }
+}
+
+/*----------- Smaller then 960px -------*/
+
+@media all and (max-width: 960px) {
+    #shell-header {
+        padding: 0.8em 1.5% 0;
+    }
+    #shell-header .lh-container {
+        width: 26%;
+    }
+    #shell-header .rh-container {
+        width: 74%;
+    }
+    .text-logo {
+        max-width: 85%;
+    }
+    .phone-container {
+        font-size: 1.033vw;
+        font-weight: 600;
+        margin-top: 1.2em;
+        width: 65%;
+    }
+    .smart-search-cont {
+        padding: 0.5% 0.7%;
+        width: 34.6%;
+    }
+    #s_search {
+        height: 18px;
+    }
+    #search_lbl > img {
+        margin-top: 0.05em;
+        max-width: 18px;
+    }
+    div.smart-search div.result-wrapper {
+        top: 2.5em;
+    }
+    #megamenu {
+        margin-top: 1.1em;
+    }
+    #megamenu .parent_label {
+        font-size: 0.55em;
+    }
+    #megamenu .parent_ul .parent_caret {
+        display: inline !important;
+    }
+    .megamenu_content_container {
+        left: -36.4%;
+    }
+}
+
+/*----------- Smaller then 768px -------*/
+@media all and (max-width: 768px) {
+    .logo-wrapper {
+        margin-top: 0;
+    }
+
+    .text-logo {
+        margin-left: 0.7em;
+        max-width: 54%;
+    }
+
+    #shell-header .lh-container {
+        width: 50%;
+    }
+
+    .phone-mobile {
+        display: block !important;
+        margin-right: 1em;
+        margin-top: 0.5em;
+    }
+
+    #shell-header .rh-container {
+        width: 100%;
+        position: relative;
+        z-index: 3;
+    }
+
+    .phone-mobile .map-icon {
+        border-left: 2px solid #000000;
+    }
+
+    #shell-header {
+        background-color: #f2f2f2;
+        padding: 13px 0 0 !important;
+    }
+
+    #shell-header .address-container > a {
+        font-size: 0.725em;
+    }
+
+    #shell-header .lh-container {
+        padding-bottom: 0.45em;
+    }
+
+    .phone-desktop {
+        display: none !important;
+    }
+
+    .phone-container {
+        display: none !important;
+    }
+
+    #shell-header .rh-container {
+        background-color: #000000;
+        padding: 0.6em 0;
+        position: relative;
+        width: 100%;
+    }
+
+    .smart-search-cont {
+        float: none;
+        margin: 0 auto;
+        padding: 0;
+        width: 98%;
+    }
+
+    #search_lbl > img {
+        display: none;
+    }
+
+    #search_lbl::before {
+        color: #ffffff;
+        content: "Search";
+        display: block;
+        padding: 0 0;
+        text-align: center;
+    }
+
+    #search_lbl {
+        background-color: #011f5b;
+        cursor: default;
+        font-size: 0.95em;
+        padding: 0.6em 0 0.5em;
+        text-transform: uppercase;
+        width: 17.5%;
+    }
+
+    #search_lbl.toyota {
+        background-color: #d72c2c;
+    }
+
+    .smart-search {
+        float: left;
+        width: 82%;
+    }
+
+    div.smart-search div.result-wrapper {
+        width: 95% !important;
+    }
+
+    #s_search {
+        height: 30px;
+        width: 100%;
+    }
+
+}
+
+/*----------- Smaller then 584px -------*/
+@media all and (max-width: 584px) {
+
+    #phone-icon > img {
+        max-width: 70%;
+    }
+
+    .map-icon > img {
+        max-width: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .phone-mobile {
+        margin-top: 0.5%;
+    }
+
+    .phone-mobile .map-icon {
+        padding-left: 0;
+    }
+
+    #shell-header {
+        padding: 10px 5px;
+    }
+
+    #shell-header .phone-container > a {
+        font-size: 0.925em;
+    }
+
+    #s_search {
+        height: 31px;
+        width: 100%;
+    }
+}
+
+
+/*----------- Smaller then 500px -------*/
+@media all and (max-width: 500px) {
+
+    #shell-header {
+        padding: 22px 0 0 !important;
+    }
+
+    #shell-header .lh-container {
+        padding-bottom: 1.25em;
+    }
+
+    .text-logo {
+        max-width: 80%;
+    }
+
+    #phone-icon > img {
+        max-width: 90%;
+    }
+
+    .phone-mobile {
+        margin-top: 0;
+        margin-right: 0.5em;
+    }
+
+    .phone-mobile .map-icon {
+        padding-left: 7px;
+        border-left: 1px solid #b6bdcd;
+    }
+
+    .map-icon > img {
+        max-width: 90%;
+    }
+
+    .phone-mobile #phone-icon {
+        padding-right: 10px;
+    }
+
+    .phone-mobile .map-icon {
+        padding-left: 0;
+    }
+
+    #shell-header .rh-container {
+        padding: 0.62em 0;
+    }
+
+    .smart-search-cont {
+        width: 96.5%;
+    }
+
+    #search_lbl {
+        font-size: 0.8em;
+        padding: 0.85em 0 0.7em;
+        width: 26.5%;
+    }
+
+    .smart-search {
+        width: 73%;
+    }
+
+    div.smart-search div.result-wrapper {
+        top: 2.45em;
+    }
+
+}

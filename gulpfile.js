@@ -65,16 +65,16 @@ let dealerId = arg.dealerId;
 let host = arg.host;
 let directory = arg.directory;
 let file = arg.file;
+let extension = arg.extension;
 
 //compile
 gulp.task('sass', function () {
-	console.log('sass gulp task has started');
-
 	return gulp.src('./public/stylesheets/sass/*.scss')
 		.pipe(header('$primary-color: ' + primaryColor + ';\n'))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./public/stylesheets/css'));
 });
+
 
 gulp.task('grabSiteFile', function () {
 	let filePath = directory == 'shell' ? 'shell.php' : `${directory}/${file}.${extension}`;
