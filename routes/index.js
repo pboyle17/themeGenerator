@@ -40,7 +40,7 @@ router.get('/themeGenerator/:primaryColor?/:secondaryColor?/:filename?', functio
 	
 });
 
-router.get('/shell/:siteId?/:directory?/:file?/:extension?', function (req, res) {
+router.get('/grabSiteFile/:siteId?/:directory?/:file?/:extension?', function (req, res) {
 	fetch('http://gearbox.dealereprocess.com:27052/resrc/searchtools/getAllSites/')
 		.then(res => res.json())
 		.then(data => {

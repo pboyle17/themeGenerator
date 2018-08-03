@@ -117,9 +117,9 @@ if ($this->PageModel->page_id == 373) {
 	try {
 		$view_builder = new \APP\Header\View\HeaderViewBuilder;
 		
-		//$header_view = $view_builder->buildHeader1View($header_1_data);
+		$header_view = $view_builder->buildHeader1View($header_1_data);
 		
-		$header_view = $view_builder->buildHeader3View($header_3_data);
+		//$header_view = $view_builder->buildHeader3View($header_3_data);
 		
 		echo $header_view->getOutput();
 	} catch (\TypeError $e) {
